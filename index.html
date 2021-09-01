@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>Calculadora</title>
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+	</head>
+
+  <body style="background: #D9D9D9"><!-- esse style colocado aqui deixa o restante da tela com aquele aspecto cinza -->
+
+    <div class="container"><!--aqui onde de fato começamos a "fazer a calculadora"-->
+      <div class="row">
+        <div class="col d-flex justify-content-center"><!-- centraliza a calculadora na tela com flexbox -->
+          <br>
+
+          <div class="calculadora"><!--começo da calculadora-->
+            <input id="resultado" type="text" class="form-control resultado" placeholder="0" disabled="disabled"> <!--campo de texto-->
+
+            <!--agora abaixo, as fileiras de botões, de cima pra baixo-->
+            
+            <div class="row"><!-- aqui ele define um row, já dentro de outro row, para que as posições fiquem organizadas (o mesmo é feito em todas as outras fileiras de botão.) -->
+              <!--Primeira fila: botão de limpar (C), divisão (/) e multiplicação(X)-->
+              <button onclick="calcular('acao', 'c')" type="button" class="btn btn-dark btn-lg clear font-weight-light">C</button>
+              <button onclick="calcular('acao', '/')" type="button" class="btn btn-dark btn-lg font-weight-light">/</button>
+              <button onclick="calcular('acao', '*')" type="button" class="btn btn-dark btn-lg font-weight-light">x</button>
+            </div>
+
+            <div class="row"> <!--Segunda fila: 7, 8, 9 e subtração(-)-->
+              <button onclick="calcular('valor', 7)" type="button" class="btn btn-dark btn-lg font-weight-light">7</button>
+              <button onclick="calcular('valor', 8)" type="button" class="btn btn-dark btn-lg font-weight-light">8</button>
+              <button onclick="calcular('valor', 9)" type="button" class="btn btn-dark btn-lg font-weight-light">9</button>
+              <button onclick="calcular('acao', '-')" type="button" class="btn btn-dark btn-lg font-weight-light">-</button>
+            </div>
+            
+            <div class="row"> <!--Terceira fila: 4, 5, 6 e soma(+)-->
+              <button onclick="calcular('valor', 4)" type="button" class="btn btn-dark btn-lg font-weight-light">4</button>
+              <button onclick="calcular('valor', 5)" type="button" class="btn btn-dark btn-lg font-weight-light">5</button>
+              <button onclick="calcular('valor', 6)" type="button" class="btn btn-dark btn-lg font-weight-light">6</button>
+              <button onclick="calcular('acao', '+')" type="button" class="btn btn-dark btn-lg font-weight-light">+</button>
+            </div>
+
+            <div class="row"> <!--Quarta fila: 1, 2, 3 e igual(=)-->
+              <button onclick="calcular('valor', 1)" type="button" class="btn btn-dark btn-lg font-weight-light">1</button>
+              <button onclick="calcular('valor', 2)" type="button" class="btn btn-dark btn-lg font-weight-light">2</button>
+              <button onclick="calcular('valor', 3)" type="button" class="btn btn-dark btn-lg font-weight-light">3</button>
+              <button onclick="calcular('acao', '=')" type="button" class="btn btn-dark btn-lg enter">=</button>
+            </div>
+
+            <div class="row" style="margin-top: -60px"> <!--Quinta e última fila: 0 e ponto (.). Observação 1: Nele na forma visual também há parte do igual(=). Observação 2: É aplicado um espaçamento superior negativo de 60 pixeis para que o zero e o ponto fiquem igualados na posição-->
+              <button onclick="calcular('valor', 0)" type="button" class="btn btn-dark zero btn-lg font-weight-light">0</button>
+              <button onclick="calcular('acao', '.')" type="button" class="btn btn-dark btn-lg font-weight-light">.</button>
+            </div>
+
+            <!-- Mais uma informação: em todos os botões há um atributo onclick que chama a função calcular, essa que por sua vez recebe 2 atributos: o tipo (valor/número ou ação) e o nome do próprio botão (1, 2, 3, =, c, etc) -->
+
+          </div>
+        </div>
+      </div>
+    </div><!--fim calculadora-->    
+
+    <script src="script.js"></script><!--script customizado-->
+
+  </body>	
+
+</html>

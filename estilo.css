@@ -1,0 +1,43 @@
+  .calculadora {
+
+    margin-top: 40px;/*margem superior de 40 pixels*/
+    border: solid 1px #000;/*define borda preta*/
+    padding: 20px; /*define um espaçamento interno de 20 pixeis*/
+    background-color: #2E2E2E; /*define um background preto, mas não totalmente preto*/
+    border-radius: 10px; /*aplica arredondamento nas bordas*/
+    box-shadow: 1px 1px 5px #000; /*aplica sombra preta*/
+
+  }
+
+  .btn { /*customizando o próprio bootstrap*/
+
+    width: 60px; /*aplica uma largura de 50 pixeis*/
+    height: 50px; /*aplica um tamanho de 60 pixeis*/
+    margin: 5px; /*aplica um espaçamento externo de 5 píxeis*/
+    box-shadow: 1px 1px 1px #000; /*sombra preta*/
+
+  }
+
+  .clear {
+    width: 130px;/*largura de 130 pixeis, fazendo com que o botão da limpeza fique maior ocupando 2 posições
+    no horizontal*/
+  }
+
+  .enter {
+    height: 110px; /*aplica um tamanho de 110 pixeis. Isso fará com que o sinal de igual fique maior,
+    ocupando 2 posições verticais*/
+  }
+
+  .zero {
+    width: 130px; /*aplica uma largura de 130 pixeis. Isso fará com que o zero fique largo e "
+    ocupe 2 posições" horizontalmente*/
+  }
+
+  .resultado { /*campo de texto onde se digita e aparece os resultados*/
+    text-align: right; /*escrita começando da direita*/
+    font-size: 20px; /*tamanho da fonte:  20 pixeis*/
+    margin-top: 10px; /*espaçamento superior externo de 10 pixeis*/
+    margin-bottom: 20px; /*espaçamento inferior externo de 20 pixeis*/
+    border: solid 1px #000; /*define borda preta*/
+    box-shadow: 1px 1px 1px #000; /*define sombra preta*/
+  }
